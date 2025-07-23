@@ -1,0 +1,20 @@
+## [v1.0] - 23/07/2025
+### Primeira Versão - Estrutura Base do Conversor de Temperatura
+
+- Implementação inicial do programa em Python utilizando interface via linha de comando (CLI).
+- Seleção da escala de origem e de destino entre três opções:
+  - Celsius
+  - Fahrenheit
+  - Kelvin
+- Entrada do valor numérico da temperatura a ser convertida.
+- Conversões suportadas:
+  - Celsius → Fahrenheit
+  - Celsius → Kelvin
+  - Fahrenheit → Celsius
+  - Fahrenheit → Kelvin
+  - Kelvin → Celsius
+  - Kelvin → Fahrenheit
+- Exibição do resultado da conversão no terminal.
+- Não há validações implementadas nesta versão (exceto a conversão para `float`).
+- Estrutura preparada para futuras versões com validações, loops e melhorias.
+

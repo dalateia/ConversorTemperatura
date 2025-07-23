@@ -1,0 +1,29 @@
+Endentendo a lógica do programa. O que será feito para este algoritmo?
+
+1 - Aprensentar o programa com interface simplificada CLI
+
+2 - O programa terá 3 etapas de coleta de dados:
+- Escala de origem 
+- Escala de destino (Com base na escala de origem, será apresentada somente as opções possíveis de conversão)
+- Temperatura
+É interessante adicionar uma observação de valor mínimo descrito ao lado de cada opção de escala e informar que somente números são aceitos.
+Mesmo com as instruções previamente pensadas, é necessário criar as validações que serão dadas da seguinte forma:
+=====================
+
+3 - Validação 1: Apenas números são aceitos, reais ou inteiros, caso uma letra seja informada, o programa retorna "valor inválido" e pergunta novamente.
+
+4 - Validação 2: Dependendo da escala de origem, o código irá validar as conversões da seguinte forma: 
+- Para conversões onde Kelvin é a opção inicial, não é permitido valores inferiores a 0.
+- Para conversões onde Celcius é a opção inicial, não é permitido valores inferiores a -273,15
+- Para conversões onde Fareinheit é a opção inicial, não é permitido valores inferiores a -459,67
+Neste cenários, caso o valor seja inválido, também iremos retornar uma mensagem de "Valor inválido para {escala} o menor valor permitido é {minimo_da_escala}" e perguntará novamente o valor.
+
+5 - Com valores válidos, haverá 6 calculos previstos que serão executados assim:
+Celcius > Farenheit ou Kelvin
+Farenheit > Celcius ou Kelvin
+Kelvin > Celcius ou Farenheit
+
+6 - Após o calculo feito, irá imprimir na tela o valor convertido
+
+7 - Ao final da conversão o programa perguntará se deseja realizar outra conversão ou se deseja sair (Digite "0" para realizar outra conversão ou "SAIR" para encerrar o programa)
+

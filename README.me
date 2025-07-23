@@ -1,28 +1,60 @@
-Endentendo a lógica do programa. O que será feito para este algoritmo?
+# 🌡️ Conversor de Temperatura em Python
 
-1 - Aprensentar o programa com interface simplificada CLI
+Conversor simples entre Celsius, Fahrenheit e Kelvin via linha de comando (CLI).  
+Projeto desenvolvido em Python com foco no aprendizado de lógica de programação, estrutura sequencial e boas práticas de versionamento.
 
-2 - O programa terá 3 etapas de coleta de dados:
-- Escala de origem 
-- Escala de destino (Com base na escala de origem, será apresentada somente as opções possíveis de conversão)
-- Temperatura
-É interessante adicionar uma observação de valor mínimo descrito ao lado de cada opção de escala e informar que somente números são aceitos.
-Mesmo com as instruções previamente pensadas, é necessário criar as validações que serão dadas da seguinte forma:
-=====================
+---
 
-3 - Validação 1: Apenas números são aceitos, reais ou inteiros, caso uma letra seja informada, o programa retorna "valor inválido" e pergunta novamente.
+## 📌 Objetivo da Versão 1
 
-4 - Validação 2: Dependendo da escala de origem, o código irá validar as conversões da seguinte forma: 
-- Para conversões onde Kelvin é a opção inicial, não é permitido valores inferiores a 0.
-- Para conversões onde Celcius é a opção inicial, não é permitido valores inferiores a -273,15
-- Para conversões onde Fareinheit é a opção inicial, não é permitido valores inferiores a -459,67
-Neste cenários, caso o valor seja inválido, também iremos retornar uma mensagem de "Valor inválido para {escala} o menor valor permitido é {minimo_da_escala}" e perguntará novamente o valor.
+A versão inicial tem como principal objetivo entregar um código **funcional e direto**, sem qualquer validação ou modularização.  
+Serve como base sólida para iterações futuras.
 
-5 - Com valores válidos, haverá 6 calculos previstos que serão executados assim:
-Celcius > Farenheit ou Kelvin
-Farenheit > Celcius ou Kelvin
-Kelvin > Celcius ou Farenheit
+---
 
-6 - Após o calculo feito, irá imprimir na tela o valor convertido
+## ✅ Funcionalidades
 
-7 - Ao final da conversão o programa perguntará se deseja realizar outra conversão ou se deseja sair (Digite "0" para realizar outra conversão ou "SAIR" para encerrar o programa)
+- Permite a seleção da escala de **origem** e **destino**:
+  - Celsius
+  - Fahrenheit
+  - Kelvin
+- Permite entrada da temperatura (float ou int).
+- Realiza os cálculos de conversão com fórmulas corretas.
+- Exibe o resultado final da conversão diretamente no terminal.
+
+---
+
+## ⚠️ Limitações da Versão 1
+
+- Não há verificação de entradas inválidas (ex: letras, números fora do intervalo).
+- Escalas inválidas (como selecionar a mesma de origem e destino) não são tratadas.
+- O usuário não pode repetir a conversão sem reiniciar o programa.
+- Não há uso de funções ou estruturação modular.
+
+---
+
+## 🎯 Próximos passos
+
+- [ ] Adicionar validações nas entradas do usuário.
+- [ ] Tratar casos inválidos de escala.
+- [ ] Permitir repetições via loop.
+- [ ] Modularizar o código em funções reutilizáveis.
+- [ ] Criar um menu mais interativo.
+
+---
+
+## 📂 Estrutura do Projeto
+
+.
+├── conversor.py # Código-fonte da aplicação
+├── changelog.txt # Histórico de versões e melhorias
+├── construcao.txt # Análise técnica da construção e lógica aplicada
+└── README.md # Documentação principal do projeto
+
+
+---
+
+## 📅 Versão atual
+
+**v1.0** – 23/07/2025  
+Autor: Mateus Dalateia
