@@ -11,15 +11,46 @@ print("Selecione a escala de ORIGEM:")
 print("1 - Celsius")
 print("2 - Fahrenheit")
 print("3 - Kelvin")
-escala_origem = input("Digite a opção desejada: ")
+escala_origem = input("Digite a opção desejada (1/2/3): ")  
 
-print("Selecione a escala de DESTINO:")
-print("1 - Celsius")
-print("2 - Fahrenheit")
-print("3 - Kelvin")
-escala_destino = input("Digite a opção desejada: ")
+while escala_origem not in ["1", "2", "3"]:
+    print("Opção inválida. Por favor, selecione 1, 2 ou 3.")
+    escala_origem = input("Digite a opção desejada (1/2/3): ")
 
-temperatura_inicial = float(input("Informe o valor da temperatura a ser convertida: "))
+if escala_origem == "1":      
+    print("Selecione a escala de DESTINO:")
+    print("2 - Fahrenheit")
+    print("3 - Kelvin")
+    escala_destino = input("Digite a opção desejada (2/3): ")
+    while escala_destino not in ["2", "3"]:
+        print("Opção inválida. Por favor, selecione 2 ou 3.")
+        escala_destino = input("Digite a opção desejada (2/3): ")
+
+elif escala_origem == "2":
+    print("Selecione a escala de DESTINO:")
+    print("1 - Celsius")
+    print("3 - Kelvin")
+    escala_destino = input("Digite a opção desejada (1/3): ")
+    while escala_destino not in ["1", "3"]:
+        print("Opção inválida. Por favor, selecione 1 ou 3.")
+        escala_destino = input("Digite a opção desejada (1/3): ")
+
+elif escala_origem == "3":
+    print("Selecione a escala de DESTINO:")
+    print("1 - Celsius")
+    print("2 - Fahrenheit")
+    escala_destino = input("Digite a opção desejada (1/2): ")
+    while escala_destino not in ["1", "2"]:
+        print("Opção inválida. Por favor, selecione 1 ou 2.")
+        escala_destino = input("Digite a opção desejada (1/2): ")
+
+while True :
+    entrada = input("Informe o valor da temperatura a ser convertida: ")
+    try:
+        temperatura_inicial = float(entrada)
+        break
+    except ValueError:
+        print("Valor inválido. Digite apenas números.")
 
 #Convertendo Celsius para outras escalas
 if escala_origem == "1" and escala_destino == "2":

@@ -18,3 +18,13 @@
 - Não há validações implementadas nesta versão (exceto a conversão para `float`).
 - Estrutura preparada para futuras versões com validações, loops e melhorias.
 
+## [v2.0] - 24/07/2025
+### Segunda Versão - Validações de Entrada e Lógica Condicional
+
+- Adicionada validação para escala de origem e destino (aceita apenas 1, 2 ou 3).
+- Impedida a seleção da mesma escala para origem e destino:
+  - O menu de destino agora exibe apenas as duas opções possíveis diferentes da escala escolhida na origem.
+- Implementada validação do valor de temperatura:
+  - Aceita apenas valores numéricos (float).
+  - Utiliza laço while com bloco try/except para repetir o input em caso de erro.
+- Código ajustado para seguir o padrão snake_case em todas as variáveis.

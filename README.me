@@ -1,60 +1,61 @@
 # 🌡️ Conversor de Temperatura em Python
 
-Conversor simples entre Celsius, Fahrenheit e Kelvin via linha de comando (CLI).  
+Conversor simples entre Celsius, Fahrenheit e Kelvin via linha de comando (CLI).
 Projeto desenvolvido em Python com foco no aprendizado de lógica de programação, estrutura sequencial e boas práticas de versionamento.
 
 ---
 
-## 📌 Objetivo da Versão 1
+## 📌 Objetivo da Versão 2
 
-A versão inicial tem como principal objetivo entregar um código **funcional e direto**, sem qualquer validação ou modularização.  
-Serve como base sólida para iterações futuras.
+A segunda versão mantém a estrutura sequencial, mas foca em tornar o programa mais **seguro e amigável ao usuário**, com validações simples e lógicas condicionais aprimoradas.
+Ainda sem uso de funções ou modularização.
 
 ---
 
 ## ✅ Funcionalidades
 
-- Permite a seleção da escala de **origem** e **destino**:
-  - Celsius
-  - Fahrenheit
-  - Kelvin
-- Permite entrada da temperatura (float ou int).
-- Realiza os cálculos de conversão com fórmulas corretas.
-- Exibe o resultado final da conversão diretamente no terminal.
+* Permite a seleção da escala de **origem** e **destino**:
+
+  * Celsius
+  * Fahrenheit
+  * Kelvin
+* Escala de destino é sempre diferente da de origem.
+* Permite entrada da temperatura (float ou int).
+* Valida se o valor informado é numérico.
+* Realiza os cálculos de conversão com fórmulas corretas.
+* Exibe o resultado final da conversão diretamente no terminal.
 
 ---
 
-## ⚠️ Limitações da Versão 1
+## ⚠️ Limitações da Versão 2
 
-- Não há verificação de entradas inválidas (ex: letras, números fora do intervalo).
-- Escalas inválidas (como selecionar a mesma de origem e destino) não são tratadas.
-- O usuário não pode repetir a conversão sem reiniciar o programa.
-- Não há uso de funções ou estruturação modular.
+* O usuário ainda não pode repetir a conversão sem reiniciar o programa.
+* Não há uso de funções ou estruturação modular.
+* Não há tratamento para entrada com vírgulas ou espaços.
+* Código ainda é todo linear (estrutura sequencial única).
 
 ---
 
 ## 🎯 Próximos passos
 
-- [ ] Adicionar validações nas entradas do usuário.
-- [ ] Tratar casos inválidos de escala.
-- [ ] Permitir repetições via loop.
-- [ ] Modularizar o código em funções reutilizáveis.
-- [ ] Criar um menu mais interativo.
+* [ ] Permitir repetições via loop principal.
+* [ ] Modularizar o código em funções reutilizáveis.
+* [ ] Tratar entradas com vírgulas ou outros caracteres numéricos válidos.
+* [ ] Criar um menu mais interativo e intuitivo.
+* [ ] Melhorar exibição de resultados com mais contexto.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-.
-├── conversor.py # Código-fonte da aplicação
-├── changelog.txt # Histórico de versões e melhorias
-├── construcao.txt # Análise técnica da construção e lógica aplicada
-└── README.md # Documentação principal do projeto
-
+* conversor.py — Código-fonte da aplicação
+* changelog.txt — Histórico de versões e melhorias
+* construcao.txt — Análise técnica da construção e lógica aplicada
+* README.md — Documentação principal do projeto
 
 ---
 
 ## 📅 Versão atual
 
-**v1.0** – 23/07/2025  
+**v2.0** – 24/07/2025
 Autor: Mateus Dalateia
