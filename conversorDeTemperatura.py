@@ -5,7 +5,7 @@
 #Descrição: Este programa converte temperaturas entre Celsius, Fahrenheit e Kelvin.
 #Versão: v1.0
 
-while True:
+def exibir_menu_escala_origem():
     print("=== Conversor de Temperatura ===")
     print("Selecione a escala de ORIGEM:")
     print("1 - Celsius")
@@ -16,7 +16,10 @@ while True:
     while escala_origem not in ["1", "2", "3"]:
         print("Opção inválida. Por favor, selecione 1, 2 ou 3.")
         escala_origem = input("Digite a opção desejada (1/2/3): ")
+    return escala_origem
+pass
 
+def exibir_menu_escala_destino(escala_origem):
     if escala_origem == "1":      
         print("Selecione a escala de DESTINO:")
         print("2 - Fahrenheit")
@@ -43,15 +46,20 @@ while True:
         while escala_destino not in ["1", "2"]:
             print("Opção inválida. Por favor, selecione 1 ou 2.")
             escala_destino = input("Digite a opção desejada (1/2): ")
+    return escala_destino
+pass
 
+def ler_temperatura():
     while True :
-        entrada = input("Informe o valor da temperatura a ser convertida: ")
+        temperatura_inicial = input("Informe o valor da temperatura a ser convertida: ")
         try:
-            temperatura_inicial = float(entrada)
-            break
+            temperatura_inicial = float(temperatura_inicial)
+            return temperatura_inicial
         except ValueError:
             print("Valor inválido. Digite apenas números.")
+pass
 
+def conversao(escala_origem, escala_destino, temperatura_inicial):
     #Convertendo Celsius para outras escalas
     if escala_origem == "1" and escala_destino == "2":
         temperatura_convertida = (temperatura_inicial * 9 / 5) + 32
@@ -69,26 +77,44 @@ while True:
         temperatura_convertida = temperatura_inicial - 273.15
     elif escala_origem == "3" and escala_destino == "2":
         temperatura_convertida = ((temperatura_inicial - 273.15) * 9 / 5) + 32
-
-    #Exibição dos resultados
-    escalas = {
+    return temperatura_convertida
+pass
+   
+    #Dicionário para exibição detalhada
+escalas = {
         "1": "°C (Celsius)",
         "2": "°F (Fahrenheit)",
         "3": "°K (Kelvin)"
     }
+
+def exibir_resultados(escala_origem, escala_destino, temperatura_inicial, temperatura_convertida):
+    #Exibição dos resultados
     print("\nResultado da conversão:")
     print(f"Temperatura informada: {temperatura_inicial:.1f}{escalas[escala_origem]}")
     print(f"Temperatura convertida: {temperatura_convertida:.1f}{escalas[escala_destino]}")
     print(f"{temperatura_inicial:.1f}{escalas[escala_origem]} equivale a {temperatura_convertida:.1f}{escalas[escala_destino]}")
     
+pass
+def repetir_conversao():
     repetir = ""
-    while repetir not in ("n","s"):
+    while True:
         repetir = input("Deseja realizar outra conversão? (s/n)").lower()
-        if repetir not in ("n","s"):
+        if repetir == "s":
+           return True 
+        elif repetir == "n":
+            return False
+        else:
            print("O valor digitado é invalido, digite s para continuar ou n para encerrar o programa.")
-    else:
-     if repetir == "n" :
-        break
-     elif repetir == "s":
-        continue
-    
+pass
+
+def main():
+    while True:
+        escala_origem = exibir_menu_escala_origem()
+        escala_destino = exibir_menu_escala_destino(escala_origem)
+        temperatura_incial = ler_temperatura()
+        convertido = conversao(temperatura_incial, escala_origem, escala_destino)
+        exibir_resultados(temperatura_incial, convertido, escala_origem, escala_destino)
+        if not repetir_conversao():
+            break
+
+main()
