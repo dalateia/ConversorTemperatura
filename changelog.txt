@@ -29,11 +29,48 @@
   - Utiliza laço while com bloco try/except para repetir o input em caso de erro.
 - Código ajustado para seguir o padrão snake_case em todas as variáveis.
 
+## [v3.2] - 30/07/2025
+### Versão 3.2 - Limites Físicos e Mensagens Explicativas
+
+- Implementada verificação de limites físicos para cada escala:
+  - Celsius: -273.15
+  - Fahrenheit: -459.67
+  - Kelvin: 0
+- Quando um valor abaixo do limite é informado:
+  - O programa alerta que o valor é fisicamente inalcançável.
+  - O usuário pode optar por continuar com a conversão por curiosidade ou informar um novo valor.
+- Adicionada mensagem explicativa ao usuário com exemplos de temperaturas de referência (como zero absoluto).
+- Estrutura do código preparada para reaproveitamento e clareza na leitura.
+
 ## [v3.3] - 30/07/2025
 ### Terceira Versão - Tratamento de Erros e Robustez do Programa
 
 - Implementado tratamento para interrupção do programa via KeyboardInterrupt e EOFError, com mensagem amigável ao usuário.
-- Adicionado .strip() nas entradas para evitar problemas com espaços em branco.
-- Função realizar_conversao retorna None e exibe mensagem de erro caso as escalas selecionadas sejam inválidas.
-- Validação na função main para lidar com conversões inválidas e encerrar o programa com segurança.
+- Adicionado `.strip()` nas entradas para evitar problemas com espaços em branco.
+- Função `realizar_conversao()` retorna None e exibe mensagem de erro caso as escalas selecionadas sejam inválidas.
+- Validação na função `main()` para lidar com conversões inválidas e encerrar o programa com segurança.
 - Melhorias na experiência do usuário durante encerramento manual do programa.
+
+## [v3.4] - 30/07/2025
+### Versão 3.4 - Organização de Funções e Mensagens Personalizadas
+
+- Padronização das mensagens exibidas ao usuário com quebras de linha e espaçamento adequado.
+- Criação da função `mostrar_mensagem_limite()` para centralizar o alerta sobre limites físicos.
+- Separação lógica das responsabilidades em funções específicas:
+  - `verificar_limite_fisico()`
+  - `informar_limite_e_perguntar()`
+  - `mostrar_temperaturas_referencia()`
+- Código modularizado para facilitar testes e futuras expansões.
+
+## [v3.5] - 30/07/2025
+### Versão 3.5 - Loop Principal e Menu de Navegação
+
+- Implementada função `main()` como ponto de entrada do programa.
+- Criado loop principal com `while` para permitir múltiplas conversões até o usuário optar por sair.
+- Adicionado menu interativo com as opções:
+  - Realizar nova conversão
+  - Encerrar o programa
+- Melhorias na usabilidade e fluxo do programa:
+  - Mensagens mais amigáveis após cada conversão.
+  - Encerramento limpo com agradecimento ao usuário.
+- Refatoração geral para clareza e manutenção da estrutura.
