@@ -1,61 +1,63 @@
 # 🌡️ Conversor de Temperatura em Python
 
-Conversor simples entre Celsius, Fahrenheit e Kelvin via linha de comando (CLI).
-Projeto desenvolvido em Python com foco no aprendizado de lógica de programação, estrutura sequencial e boas práticas de versionamento.
+Conversor simples entre Celsius, Fahrenheit e Kelvin via linha de comando (CLI).  
+Projeto desenvolvido em Python com foco no aprendizado de lógica de programação, estrutura modular e boas práticas de versionamento.
 
 ---
 
-## 📌 Objetivo da Versão 2
+## 📌 Objetivo da Versão 3
 
-A segunda versão mantém a estrutura sequencial, mas foca em tornar o programa mais **seguro e amigável ao usuário**, com validações simples e lógicas condicionais aprimoradas.
-Ainda sem uso de funções ou modularização.
+A terceira versão aprimora o programa com **tratamento de erros leves** e melhora a robustez da aplicação.  
+Agora o programa é mais amigável em casos de entradas inválidas e suporta encerramento pelo usuário com mensagens apropriadas.  
+Modularização via funções é mantida para clareza e reutilização.
 
 ---
 
 ## ✅ Funcionalidades
 
-* Permite a seleção da escala de **origem** e **destino**:
+* Seleção da escala de **origem** e **destino** (sempre diferentes):
 
-  * Celsius
-  * Fahrenheit
-  * Kelvin
-* Escala de destino é sempre diferente da de origem.
-* Permite entrada da temperatura (float ou int).
-* Valida se o valor informado é numérico.
-* Realiza os cálculos de conversão com fórmulas corretas.
-* Exibe o resultado final da conversão diretamente no terminal.
+  * Celsius  
+  * Fahrenheit  
+  * Kelvin  
+
+* Entrada da temperatura aceita números reais (float).
+* Validação das entradas com repetição até dado válido ser informado.
+* Conversão entre todas as escalas possíveis com fórmulas corretas.
+* Tratamento de entradas inválidas com mensagens claras.
+* Permite repetir conversões em loop controlado.
+* Captura interrupção via teclado (Ctrl+C) e fim de arquivo (EOF), encerrando com mensagem amigável.
+* Remove espaços em branco automaticamente das entradas para maior robustez.
 
 ---
 
-## ⚠️ Limitações da Versão 2
+## ⚠️ Limitações da Versão 3
 
-* O usuário ainda não pode repetir a conversão sem reiniciar o programa.
-* Não há uso de funções ou estruturação modular.
-* Não há tratamento para entrada com vírgulas ou espaços.
-* Código ainda é todo linear (estrutura sequencial única).
+* Entrada com vírgulas ainda não suportada (usar ponto decimal).
+* Interface ainda é via terminal, sem GUI.
+* Pode ser aprimorado com suporte a múltiplos formatos numéricos.
 
 ---
 
 ## 🎯 Próximos passos
 
-* [ ] Permitir repetições via loop principal.
-* [ ] Modularizar o código em funções reutilizáveis.
-* [ ] Tratar entradas com vírgulas ou outros caracteres numéricos válidos.
-* [ ] Criar um menu mais interativo e intuitivo.
-* [ ] Melhorar exibição de resultados com mais contexto.
+* [ ] Suporte a formatos numéricos alternativos (ex: vírgula decimal).  
+* [ ] Adição de interface gráfica ou web.  
+* [ ] Implementação de logs para erros e histórico de conversões.  
+* [ ] Suporte a outras unidades de temperatura.  
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-* conversor.py — Código-fonte da aplicação
-* changelog.txt — Histórico de versões e melhorias
-* construcao.txt — Análise técnica da construção e lógica aplicada
-* README.md — Documentação principal do projeto
+* conversorDeTemperatura.py — Código-fonte da aplicação modularizada  
+* changelog.txt — Histórico de versões e melhorias  
+* construcao.txt — Resumo da construção e lógica aplicada  
+* README.md — Documentação principal do projeto  
 
 ---
 
 ## 📅 Versão atual
 
-**v2.0** – 24/07/2025
+**v3.3** – 30/07/2025  
 Autor: Mateus Dalateia

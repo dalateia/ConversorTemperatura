@@ -28,3 +28,12 @@
   - Aceita apenas valores numéricos (float).
   - Utiliza laço while com bloco try/except para repetir o input em caso de erro.
 - Código ajustado para seguir o padrão snake_case em todas as variáveis.
+
+## [v3.3] - 30/07/2025
+### Terceira Versão - Tratamento de Erros e Robustez do Programa
+
+- Implementado tratamento para interrupção do programa via KeyboardInterrupt e EOFError, com mensagem amigável ao usuário.
+- Adicionado .strip() nas entradas para evitar problemas com espaços em branco.
+- Função realizar_conversao retorna None e exibe mensagem de erro caso as escalas selecionadas sejam inválidas.
+- Validação na função main para lidar com conversões inválidas e encerrar o programa com segurança.
+- Melhorias na experiência do usuário durante encerramento manual do programa.
