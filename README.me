@@ -5,11 +5,11 @@ Projeto desenvolvido em Python com foco no aprendizado de lógica de programaç�
 
 ---
 
-## 📌 Objetivo da Versão 3
+## 📌 Objetivo da Versão 3.5
 
-A terceira versão aprimora o programa com **tratamento de erros leves** e melhora a robustez da aplicação.  
-Agora o programa é mais amigável em casos de entradas inválidas e suporta encerramento pelo usuário com mensagens apropriadas.  
-Modularização via funções é mantida para clareza e reutilização.
+A versão 3.5 aprimora o programa com tratamento robusto de entradas, aceita números com vírgula ou ponto decimal e valida limites físicos da temperatura (zero absoluto), exibindo mensagens informativas.  
+O programa mantém modularização clara e permite repetir conversões em loop controlado.  
+Também trata interrupções do usuário de forma amigável.
 
 ---
 
@@ -21,30 +21,28 @@ Modularização via funções é mantida para clareza e reutilização.
   * Fahrenheit  
   * Kelvin  
 
-* Entrada da temperatura aceita números reais (float).
-* Validação das entradas com repetição até dado válido ser informado.
-* Conversão entre todas as escalas possíveis com fórmulas corretas.
-* Tratamento de entradas inválidas com mensagens claras.
-* Permite repetir conversões em loop controlado.
-* Captura interrupção via teclado (Ctrl+C) e fim de arquivo (EOF), encerrando com mensagem amigável.
-* Remove espaços em branco automaticamente das entradas para maior robustez.
+* Entrada da temperatura aceita números reais com ponto ou vírgula decimal.  
+* Validação das entradas com repetição até dado válido ser informado.  
+* Validação do limite físico mínimo da temperatura para cada escala, com aviso e opção de continuar ou alterar valor.  
+* Conversão correta entre todas as escalas suportadas.  
+* Exibição clara dos resultados com formatação numérica.  
+* Permite repetir conversões em loop.  
+* Captura interrupção via teclado (Ctrl+C) e fim de arquivo (EOF), encerrando com mensagem amigável.  
+* Remove espaços em branco automaticamente das entradas para maior robustez.  
 
 ---
 
-## ⚠️ Limitações da Versão 3
+## ⚠️ Limitações da Versão 3.5
 
-* Entrada com vírgulas ainda não suportada (usar ponto decimal).
-* Interface ainda é via terminal, sem GUI.
-* Pode ser aprimorado com suporte a múltiplos formatos numéricos.
+* Interface ainda é via terminal, sem GUI.  
+* Não possui registro/log de histórico de conversões.  
 
 ---
 
 ## 🎯 Próximos passos
 
-* [ ] Suporte a formatos numéricos alternativos (ex: vírgula decimal).  
-* [ ] Adição de interface gráfica ou web.  
-* [ ] Implementação de logs para erros e histórico de conversões.  
-* [ ] Suporte a outras unidades de temperatura.  
+* [ ] Implementar interface gráfica simples (GUI) para tornar o uso mais intuitivo.  
+* [ ] Implementar logs para erros e histórico de conversões.  
 
 ---
 
@@ -59,5 +57,5 @@ Modularização via funções é mantida para clareza e reutilização.
 
 ## 📅 Versão atual
 
-**v3.3** – 30/07/2025  
+**v3.5** – 30/07/2025  
 Autor: Mateus Dalateia
