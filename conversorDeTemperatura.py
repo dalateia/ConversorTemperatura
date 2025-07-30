@@ -1,9 +1,9 @@
 #Projeto #1: Conversor de Temperatura em Python
 #Repositório: github.com/mateusdalateia/ConversorTemperatura
 #Autor: Mateus Dalateia
-#Data: 20/07/2025
+#Data: 30/07/2025
 #Descrição: Este programa converte temperaturas entre Celsius, Fahrenheit e Kelvin.
-#Versão: v1.0
+#Versão: v3.2
 
 def exibir_menu_escala_origem():
     print("=== Conversor de Temperatura ===")
@@ -59,7 +59,7 @@ def ler_temperatura():
             print("Valor inválido. Digite apenas números.")
 pass
 
-def conversao(escala_origem, escala_destino, temperatura_inicial):
+def realizar_conversao(escala_origem, escala_destino, temperatura_inicial):
     #Convertendo Celsius para outras escalas
     if escala_origem == "1" and escala_destino == "2":
         temperatura_convertida = (temperatura_inicial * 9 / 5) + 32
@@ -87,14 +87,14 @@ escalas = {
         "3": "°K (Kelvin)"
     }
 
-def exibir_resultados(escala_origem, escala_destino, temperatura_inicial, temperatura_convertida):
-    #Exibição dos resultados
+def exibir_resultados(escala_origem, escala_destino, temperatura_inicial, temperatura_convertida):    #Exibição dos resultados
     print("\nResultado da conversão:")
-    print(f"Temperatura informada: {temperatura_inicial:.1f}{escalas[escala_origem]}")
-    print(f"Temperatura convertida: {temperatura_convertida:.1f}{escalas[escala_destino]}")
-    print(f"{temperatura_inicial:.1f}{escalas[escala_origem]} equivale a {temperatura_convertida:.1f}{escalas[escala_destino]}")
+    print(f"Temperatura informada: {temperatura_inicial:.2f}{escalas[escala_origem]}")
+    print(f"Temperatura convertida: {temperatura_convertida:.2f}{escalas[escala_destino]}")
+    print(f"{temperatura_inicial:.2f}{escalas[escala_origem]} equivale a {temperatura_convertida:.2f}{escalas[escala_destino]}")
     
 pass
+
 def repetir_conversao():
     repetir = ""
     while True:
@@ -111,9 +111,9 @@ def main():
     while True:
         escala_origem = exibir_menu_escala_origem()
         escala_destino = exibir_menu_escala_destino(escala_origem)
-        temperatura_incial = ler_temperatura()
-        convertido = conversao(temperatura_incial, escala_origem, escala_destino)
-        exibir_resultados(temperatura_incial, convertido, escala_origem, escala_destino)
+        temperatura_inicial = ler_temperatura()
+        temperatura_convertida = realizar_conversao(escala_origem, escala_destino, temperatura_inicial)
+        exibir_resultados(escala_origem, escala_destino, temperatura_inicial, temperatura_convertida)
         if not repetir_conversao():
             break
 
